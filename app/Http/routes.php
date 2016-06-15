@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/ThemSanPham',function(){
+        $sanpham = new App\SanPham();
+        $sanpham->TenSP = 'Sản Phẩm 1';
+        $sanpham->HinhSP = 'abcdefgh';
+        $sanpham->Gia = 1000;
+        $sanpham->save();
+        echo "Đã Thêm Sản Phẩm";
+});
+
+Route::resource('SanPham','ControllerSanPham');
