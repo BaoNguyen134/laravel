@@ -1,0 +1,34 @@
+﻿C:\Users\DELL>cd C:\xampp\htdocs\laravel
+
+C:\xampp\htdocs\laravel>php artisan migrate
+
+[37;41m                                                                                                [39;49m
+[37;41m  [PDOException]                                                                                [39;49m
+[37;41m  SQLSTATE[HY000] [1045] Access denied for user 'applaravel'@'localhost' (using password: YES)  [39;49m
+[37;41m                                                                                                [39;49m
+
+
+C:\xampp\htdocs\laravel>php artisan migrate
+[32mMigration table created successfully.[39m
+[32mMigrated:[39m 2014_10_12_000000_create_users_table
+[32mMigrated:[39m 2014_10_12_100000_create_password_resets_table
+
+C:\xampp\htdocs\laravel>php artisan make:migration Bao_TaoBang_SanPham
+[32mCreated Migration:[39m 2016_06_15_022557_Bao_TaoBang_SanPham
+
+C:\xampp\htdocs\laravel>php artisan migrate
+[32mMigrated:[39m 2016_06_15_022557_Bao_TaoBang_SanPham
+
+C:\xampp\htdocs\laravel>php artisan migrate:rollback
+[32mRolled back:[39m 2016_06_15_022557_Bao_TaoBang_SanPham
+
+C:\xampp\htdocs\laravel>php artisan migrate
+[32mMigrated:[39m 2016_06_15_022557_Bao_TaoBang_SanPham
+
+C:\xampp\htdocs\laravel>php artisan make:model SanPham
+[32mModel created successfully.[39m
+
+C:\xampp\htdocs\laravel>php artisan make:controller ControllerSanPham --resource
+[32mController created successfully.[39m
+
+C:\xampp\htdocs\laravel>
